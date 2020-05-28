@@ -4,8 +4,8 @@ package pickacard;
  * A class that fills a magic hand of 7 cards with random Card Objects and then asks the user to pick a card and
  * searches the array of cards for the match to the user's card. To be used as starting code in ICE 1
  *
- * @author dancye
- * @author Paul Bonenfant
+ * 
+ * @author Jashanpal Singh Bains  Date: 28 May 2020
  */
 import javax.swing.*;
   public class CardTrick { // class started
@@ -45,14 +45,18 @@ import javax.swing.*;
 
    for(int i = 0 ; i< magicHand.length ; i++)
    {
+	   
    if(value[i]== a && suit[i] == str2)
-			 System.out.println("You got a magicHand");
+			 System.out.println(" HURRAY !! , You got a magicHand");
 
 			 else
-			 System.out.println("You didn't got a magicHand");
-
-}
-   for(int i = 0 ; i <suit.length ; i++)
+			 System.out.println(" OOPS !! , You didn't got a magicHand");
+   }
+	    
+	    /* This loop is used 
+	    t0 print the content of array's */
+	    
+	    for(int i = 0 ; i <suit.length ; i++)
    {
        System.out.println(suit[i] + " : " + value[i]);
    }
