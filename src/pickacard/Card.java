@@ -7,8 +7,7 @@ package pickacard;
  * There are 52 cards in a deck, no jokers.
  * This code is to be used in Exercise 1. When you create your own branch,
  * add your name as an author.
- * @author dancye
- * @author Paul Bonenfant
+ * @author Parth Contractor 26th may 
  */
 public class Card {
 
@@ -26,8 +25,10 @@ public class Card {
     /**
      * @param suit the suit to set
      */
-    public void setSuit(String suit) {
-        this.suit = suit;
+    public void setSuit(int suit) {
+       
+        this.suit = SUITS[suit];
+        
     }
 
     /**
