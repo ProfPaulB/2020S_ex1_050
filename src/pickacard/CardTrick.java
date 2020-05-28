@@ -17,8 +17,8 @@ public class CardTrick {
         int check = 0;                                 // check variable of type int for checking the match.
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-            c.setValue((int) (Math.random() * 13));    //Setting random values of cards.
-            c.setSuit(Card.SUITS[(int) (Math.random() * 3)]);//setting random suits of cards.
+            c.setValue((int) (1 + Math.random()*13));    //Setting random values of cards.
+            c.setSuit(Card.SUITS[(int) (Math.random()*4)]);//setting random suits of cards.
             tempValue[i] = c.getValue();               //Assigning the random values to temporary variable.
             tempSuit[i] = c.getSuit();                 //Assigning the random suits to temporary variable.
         }
