@@ -2,7 +2,7 @@ package pickacard;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects and then
- * and searches the array of cards for the match to lucky card.
+ * searches the array of cards for the match to lucky card.
  *
  * @author Daljeet Singh 28 May 2020
  * @version 2.0
