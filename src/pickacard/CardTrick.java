@@ -13,6 +13,9 @@ public class CardTrick {
     public static void main(String[] args) {
         
         Card[] magicHand = new Card[7];
+        Card LuckyCard= new Card();
+        LuckyCard.setValue(4);
+        LuckyCard.setSuit("Hearts");
 
         for (int i = 0; i < magicHand.length; i++) {
            // Card c = new Card();
@@ -23,21 +26,30 @@ public class CardTrick {
             //System.out.println(magicHand[i].getValue());
         } 
         
-        Scanner sc = new Scanner(System.in);
+       // Scanner sc = new Scanner(System.in);
         
-        System.out.print("Enter a Card value (1-13): ");
+      /*  System.out.print("Enter a Card value (1-13): ");
         int val=sc.nextInt();
         
         System.out.print("Enter a Suit (Clubs, Spades, Diamonds, Hsearts): ");
         String sut=sc.next();
         
         System.out.println("");
-        
+        */
         int b=0;
         
-        for (int i = 0; i < magicHand.length; i++) {
+       /* for (int i = 0; i < magicHand.length; i++) {
             
             if(magicHand[i].getValue()== val && (magicHand[i].getSuit().equals(sut)))
+            {
+                b++;
+            }                   
+                     
+        }
+        */
+         for (int i = 0; i < magicHand.length; i++) {
+            
+            if(magicHand[i].getValue()== LuckyCard.getValue() && (magicHand[i].getSuit().equals(LuckyCard.getSuit())))
             {
                 b++;
             }                   
