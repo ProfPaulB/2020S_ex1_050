@@ -36,19 +36,7 @@ public class CardTrick {
           c.getSuit();
           store[i] = c.getValue()+ c.getSuit();
     
-          /* if(!b.contains(number)){
-             i++;
-               b.add(number); 
-              
-               int d = rdnumber.nextInt(3);
-               //c.setValue(insert call to random number generator here)
-               c.setValue(number);
-               //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-               c.setSuit(Card.SUITS[d]);
-               
-           
-                   
-           }*/
+
       }
        System.out.println("enter Card Number: ");
         String cardnumber  = input.nextLine();
