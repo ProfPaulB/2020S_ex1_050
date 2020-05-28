@@ -46,6 +46,13 @@ public class CardTrick {
         } else {
             System.out.printf("Sorry, your %d of %s card could not be found in magic hand of 7 cards\n", value, suit);
         }
+        
+        //Displaying the content of array.
+        System.out.println("Magic hand of 7 cards:");
+        for(int j=0; j<magicHand.length; j++)
+        {
+            System.out.println(tempValue[j]+" of "+tempSuit[j]);
+        }
 
     }
 }
