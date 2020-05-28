@@ -18,18 +18,20 @@ public class CardTrick {
         Scanner input = new Scanner( System.in);
         Card[] magicHand = new Card[7];
 
-        int[] temp = new int[7];
+        int[] temp = new int[7];         //temporary arrays
         String[] temp1 = new String[7];
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
 
-            c.setValue((int) (Math.random() * 13));
-            c.setSuit(Card.SUITS[(int) (Math.random() * 3)]);
+            c.setValue((int) (Math.random() * 13));          //setting values to card
+            c.setSuit(Card.SUITS[(int) (Math.random() * 3)]); //setting suit
 
             //System.out.println(c.getValue());
             //System.out.println(c.getSuit());
-            temp[i] = c.getValue();
+            
+            /*filling temporary arrays*/
+            temp[i] = c.getValue(); 
             temp1[i] = c.getSuit();
         }
 
@@ -38,12 +40,14 @@ public class CardTrick {
         int value = input.nextInt();                //inserted code to ask the user for Card value and suit, create their card
         System.out.println("enter suit Hearts, Spades, Diamonds, Clubs (case sensitive)");
         String suit = input.next();                          // and searched magicHand here
-
-        for (int i = 0; i < magicHand.length; i++) {      //Results
+        
+        
+        /*results*/
+        for (int i = 0; i < magicHand.length; i++) {                
             if ((value == temp[i]) && (suit.equals(temp1[i]))) {
-                System.out.println("YOU WON");
+                System.out.println("YOU WON!!!!!!!!!!!!!!");
             } else {
-                System.out.println("YOU lose");
+                System.out.println("YOU lose.....:[[[");
             }
 
         }
