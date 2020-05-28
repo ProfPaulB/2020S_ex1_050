@@ -14,7 +14,50 @@ public class CardTrick {
      */
     public static void main(String[] args) {
         
-        int card_Value,temp;            //initializing variables
+        int a,temp=0;
+        
+        String b;
+        
+        Card luckyCard=new Card();
+        luckyCard.setValue(6);
+        luckyCard.setSuit("Spades");
+        
+        a=luckyCard.getValue();
+        
+        b=luckyCard.getSuit();
+        
+        Card[] magicHand = new Card[7];
+        
+        int[] value=new int[7];
+        
+        String[] cSuit=new String[7];
+        
+        for (int i = 0; i < magicHand.length; i++) {               //loop to generate 7 random cards
+               Card c = new Card();
+               c.setValue((int)(1+Math.random()*13));
+               c.setSuit(Card.SUITS[(int)(Math.random()*4)]);
+               
+               value[i]=c.getValue();
+               cSuit[i]=c.getSuit();
+            }
+        
+        System.out.println("The seven generated magic cards are:");  //displaying the genrated cards
+            
+        for (int i = 0; i < magicHand.length; i++)
+                System.out.println(value[i]+" "+cSuit[i]);
+        
+        for (int i = 0; i < magicHand.length; i++){             //checking if user got the magic hand or not
+                  if(a==value[i] && b.equalsIgnoreCase(cSuit[i])){
+                        System.out.println("You have got a magic hand");
+                        temp=1;
+                        break;
+                  }
+                                  
+            }
+            if(temp==0)
+                System.out.println("You didn't get the magic hand");
+        
+        /*int card_Value,temp;            //initializing variables
         
         int[] value=new int[7];
         
@@ -61,7 +104,7 @@ public class CardTrick {
             
             System.out.println("You want to play again?(Y or N)");
             play=object.next().charAt(0);
-        }
+        }*/
 
     }
 
