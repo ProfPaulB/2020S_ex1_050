@@ -16,6 +16,10 @@ public class CardTrick {
         
         int card_Value,temp;            //initializing variables
         
+        int[] value=new int[7];
+        
+        String[] cSuit=new String[7];
+        
         String suit;
         
         char play='y';
@@ -30,16 +34,26 @@ public class CardTrick {
             System.out.println("Enter your suit(Hearts, Diamonds, Spades or Clubs): ");
             suit=object.next();
          
-            for (int i = 0; i < magicHand.length; i++) {                //loop to compare the user input with the magicHand array
+            for (int i = 0; i < magicHand.length; i++) {               //loop to generate 7 random cards
                Card c = new Card();
                c.setValue((int)(1+Math.random()*13));
                c.setSuit(Card.SUITS[(int)(Math.random()*4)]);
-            
-               if(card_Value==c.getValue() && suit.equalsIgnoreCase(c.getSuit())){
-                  System.out.println("You have got a magic hand");
-                  temp=1;
-                  break;
+               
+               value[i]=c.getValue();
+               cSuit[i]=c.getSuit();
             }
+            
+            System.out.println("The seven generated magic cards are:");  //displaying the genrated cards
+            
+            for (int i = 0; i < magicHand.length; i++)
+                System.out.println(value[i]+" "+cSuit[i]);
+            
+            for (int i = 0; i < magicHand.length; i++){             //checking if user got the magic hand or not
+                  if(card_Value==value[i] && suit.equalsIgnoreCase(cSuit[i])){
+                        System.out.println("You have got a magic hand");
+                        temp=1;
+                        break;
+                  }
                                   
             }
             if(temp==0)
