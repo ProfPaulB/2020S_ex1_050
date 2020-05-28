@@ -23,8 +23,37 @@ public class CardTrick {
         int number;
         int Low = 1;
         int High = 13;
-        Vector b = new Vector();
-      for (int i = 0; i < magicHand.length; i++) {
+       
+        int luckn=0;
+        String suitn;
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit("Diamonds");
+         luckn= luckyCard.getValue();
+         suitn = luckyCard.getSuit();
+        String luckynumber = luckn + suitn;
+        //this one is automatic find Lucky card 
+          for (int i = 0; i < magicHand.length; i++) {
+            Card c = new Card();
+                   
+             number = rdnumber.nextInt(13);
+           c.setValue(number);
+           c.getValue();
+           int d = rdnumber.nextInt(4);
+          c.setSuit(Card.SUITS[d]);
+          c.getSuit();
+          store[i] = c.getValue()+ c.getSuit();
+       if(  luckynumber.equals(store[i])){
+           System.out.println("correct");}
+       else
+          System.out.println("not correct");
+          }
+      
+          
+//  This is code for magic hand pick random card and searching
+       
+    /*  for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
                 
           
@@ -54,7 +83,7 @@ public class CardTrick {
           System.out.println("magic hand is:");
               for (int qu = 0; qu < magicHand.length;qu++){
            System.out.println(store[qu] ); 
-        }
+        }*/
         
         //insert code to ask the user for Card value and suit, create their card
         
@@ -62,6 +91,7 @@ public class CardTrick {
         
         //Then report the result here
     
+
 
 }
 }
