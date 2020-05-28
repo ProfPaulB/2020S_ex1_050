@@ -34,17 +34,20 @@ public class CardTrick {
             temp[i] = c.getValue(); 
             temp1[i] = c.getSuit();
         }
-
-        System.out.println("enter value of card from 1 to 13");
+        //stoped asking user for input
+ 
+       /* System.out.println("enter value of card from 1 to 13");
 
         int value = input.nextInt();                //inserted code to ask the user for Card value and suit, create their card
         System.out.println("enter suit Hearts, Spades, Diamonds, Clubs (case sensitive)");
-        String suit = input.next();                          // and searched magicHand here
+        String suit = input.next();                          // and searched magicHand here*/
         
-        
+        Card luckyCard=new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Clubs");
         /*results*/
         for (int i = 0; i < magicHand.length; i++) {                
-            if ((value == temp[i]) && (suit.equals(temp1[i]))) {
+            if ((luckyCard.getValue() == temp[i]) && (luckyCard.getSuit().equals(temp1[i]))) {  //editted to compare with lucky Card object
                 System.out.println("YOU WON!!!!!!!!!!!!!!");
             } else {
                 System.out.println("YOU lose.....:[[[");
@@ -53,4 +56,4 @@ public class CardTrick {
         }
     }
 
-
+}
