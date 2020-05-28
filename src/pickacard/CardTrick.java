@@ -15,6 +15,10 @@ import javax.swing.*;
      */
     public static void main(String[] args) { // method started
 
+	    
+	    /**
+	    *This is the input section where user will input
+	    */	 
        //String str1 = JOptionPane.showInputDialog("Enter the card value between 1 and 13");// User will input value of card
         //int a = Integer.parseInt(str1);
 
@@ -29,6 +33,9 @@ import javax.swing.*;
 	    int v = luckyCard.getValue();
 	    
 
+	    /**
+	    *This is the processing section
+	    */
     Card[] magicHand = new Card[7];
 
     String[] suit = new String[7];
@@ -50,6 +57,9 @@ import javax.swing.*;
 
         }
 
+	    /**
+	    *Printing section
+	    */
 	    for(int i = 0 ; i <magicHand.length;i++)
 	    {
 		    if(value[i] == v &&  suit[i] == l)
