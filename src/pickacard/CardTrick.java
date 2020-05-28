@@ -36,6 +36,14 @@ public class CardTrick {
             c.setSuit((Card.SUITS[(int)Math.random()*3]));
              
         }
+        Card LuckyCard = new Card(2 , "Hearts");
+        System.out.println("Cardvalue " + LuckyCard.value);
+        System.out.println("CardSuit " +  LuckyCard.suit);
+        
+        
+            
+        
+        
         Scanner input = new Scanner(System.in);
         int cardValue = 1;
         int suitvalue = 1;
@@ -65,6 +73,7 @@ public class CardTrick {
             }
             System.out.println("User picked " +  cardValue  + " of " +  suitName);
             System.out.println();
+            */
            
          
            
@@ -98,7 +107,8 @@ public class CardTrick {
                  {
                      System.out.println("Oh no! You lost the magic Card");
                  }
-                         
+                 
+          
              }
        
     }
