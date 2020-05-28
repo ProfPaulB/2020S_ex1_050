@@ -15,11 +15,19 @@ import javax.swing.*;
      */
     public static void main(String[] args) { // method started
 
-        String str1 = JOptionPane.showInputDialog("Enter the card value between 1 and 13");// User will input value of card
-        int a = Integer.parseInt(str1);
+       //String str1 = JOptionPane.showInputDialog("Enter the card value between 1 and 13");// User will input value of card
+        //int a = Integer.parseInt(str1);
 
-        String str2 = JOptionPane.showInputDialog(" Choose one of the suit :(Hearts, Diamonds, Spades, Clubs) "); // User will input suit
+        //String str2 = JOptionPane.showInputDialog(" Choose one of the suit :(Hearts, Diamonds, Spades, Clubs) "); // User will input suit
 
+	    
+	    Card luckyCard = new Card();
+	    luckyCard.setSuit("Hearts");
+	    luckyCard.setValue(5);
+	    
+	    String l = luckyCard.getSuit();
+	    int v = luckyCard.getValue();
+	    
 
     Card[] magicHand = new Card[7];
 
@@ -42,16 +50,24 @@ import javax.swing.*;
 
         }
 
+	    for(int i = 0 ; i <magicHand.length;i++)
+	    {
+		    if(value[i] == v &&  suit[i] == l)
+			     System.out.println(" HURRAY !! , You got a magicHand");
+		    else
+			    System.out.println(" OOPS !! , You didn't got a magicHand");
+	    }
+			    
 
-   for(int i = 0 ; i< magicHand.length ; i++)
-   {
+ //  for(int i = 0 ; i< magicHand.length ; i++)
+   //{
 	   
-   if(value[i]== a && suit[i] == str2)
-			 System.out.println(" HURRAY !! , You got a magicHand");
+   //if(value[i]== a && suit[i] == str2)
+			// System.out.println(" HURRAY !! , You got a magicHand");
 
-			 else
-			 System.out.println(" OOPS !! , You didn't got a magicHand");
-   }
+			// else
+			 //System.out.println(" OOPS !! , You didn't got a magicHand");
+  // }
 	    
 	    /* This loop is used 
 	    t0 print the content of array's */
