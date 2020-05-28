@@ -15,7 +15,7 @@ public class CardTrick {
         Card[] magicHand = new Card[7];
         Card LuckyCard= new Card();
         LuckyCard.setValue(4);
-        LuckyCard.setSuit("Hearts");
+        LuckyCard.setSuit(2);
 
         for (int i = 0; i < magicHand.length; i++) {
            // Card c = new Card();
