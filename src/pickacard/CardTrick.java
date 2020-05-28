@@ -70,7 +70,7 @@ public class CardTrick {
         
         for(int i = 0; i < magicHand.length; i++)
         {
-            if(magicHand[i].getValue() == user.getValue())
+            if(magicHand[i].getValue() == user.getValue() && magicHand[i].getSuit().equalsIgnoreCase(user.getSuit()))
             {
                 result = "++++WIN++++";
             }
@@ -81,7 +81,7 @@ public class CardTrick {
         }
         
         System.out.println("\n" + result); //Finally, displaying the results.
-    
+           
     }
 
 }
