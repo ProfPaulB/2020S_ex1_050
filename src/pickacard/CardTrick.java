@@ -36,14 +36,22 @@ public class CardTrick {
             c.setSuit((Card.SUITS[(int)Math.random()*3]));
              
         }
-        Card LuckyCard = new Card(2 , "Hearts");
+        
+         Card LuckyCard = new Card();
+        {
+            LuckyCard.value = 2;
+            LuckyCard.suit = "Hearts";
+            LuckyCard.setSuit("Diamonds");
+        
         System.out.println("Cardvalue " + LuckyCard.value);
-        System.out.println("CardSuit " +  LuckyCard.suit);
+        System.out.println("CardSuit "   +LuckyCard.getSuit());
+        }
+        
         
         
             
         
-        
+        /*
         Scanner input = new Scanner(System.in);
         int cardValue = 1;
         int suitvalue = 1;
@@ -97,6 +105,7 @@ public class CardTrick {
                 System.out.println("Card value is " + value[i]);
                 System.out.println(" Suit is " + suit[i]);
             }
+        /*
              for (int i = 0; i < magicHand.length; i++) 
              {
                  if(value[i] == cardValue && suit[i] == suitName)
@@ -107,7 +116,18 @@ public class CardTrick {
                  {
                      System.out.println("Oh no! You lost the magic Card");
                  }
-                 
+                 */
+                 for (int i = 0; i < magicHand.length; i++) 
+             {
+                 if(value[i] == LuckyCard.value && suit[i] == LuckyCard.getSuit()  )
+                 {
+                     System.out.println("You won the game");
+                 }
+                     else
+                 {
+                     System.out.println("You Lost the game");
+                 }
+             }
           
              }
        
