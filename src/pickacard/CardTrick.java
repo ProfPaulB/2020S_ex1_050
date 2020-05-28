@@ -30,16 +30,16 @@ public class CardTrick {
 
         //Searching the magic hand of 7 cards for user's card.
         for (int i = 0; i < magicHand.length; i++) {
-            if ( (luckyCard.getValue()) == tempValue[i]) && ( (luckyCard.getSuit()).equalsIgnoreCase(tempSuit[i])) ) {
+            if ( (luckyCard.getValue() == tempValue[i]) && (luckyCard.getSuit().equalsIgnoreCase(tempSuit[i])) ) {
                 check = 1;
             }
         }
 
         //Displaying the result.
         if (check == 1) {
-            System.out.printf("Congrats, your %d of %s card is found in magic hand of 7 cards.\n", value, suit);
+            System.out.printf("Congrats, your %d of %s card is found in magic hand of 7 cards.\n", luckyCard.getValue(), luckyCard.getSuit());
         } else {
-            System.out.printf("Sorry, your %d of %s card could not be found in magic hand of 7 cards\n", value, suit);
+            System.out.printf("Sorry, your %d of %s card could not be found in magic hand of 7 cards\n", luckyCard.getValue(), luckyCard.getSuit());
         }
         
         //Displaying the content of array.
@@ -48,6 +48,5 @@ public class CardTrick {
         {
             System.out.println(tempValue[j]+" of "+tempSuit[j]);
         }
-
     }
 }
