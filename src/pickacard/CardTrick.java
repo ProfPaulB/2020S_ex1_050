@@ -28,8 +28,8 @@ public class CardTrick {
         String suitn;
         
         Card luckyCard = new Card();
-        luckyCard.setValue(2);
-        luckyCard.setSuit("Diamonds");
+        luckyCard.setValue(10);
+        luckyCard.setSuit("Hearts");
          luckn= luckyCard.getValue();
          suitn = luckyCard.getSuit();
         String luckynumber = luckn + suitn;
@@ -89,8 +89,39 @@ public class CardTrick {
         
         // and search magicHand here
         
+        Scanner in = new Scanner(System.in);
+        
+        System.out.println("Pick a card number: ");
+        int cardNumber= in.nextInt();
+        System.out.println("Pick a suit: ");
+        String suit= in.next();
+        
+        String result= cardNumber+suit;
+        
+        boolean search= false;
+        /*for (int i = 0; i < magicHand.length; i++){
+            if(result == magicHand[i]){{
+                search = true;
+                System.out.println("You're card is matches a chard in the Magic hand!");
+            }
+        }*/
+        for (int u = 0; u < magicHand.length;u++){
+            String o =  store[u];
+                if(o.equals(result)){
+                             System.out.println("correctS" ); 
+
+                }
+        }
+        
+            if (!search){
+                System.out.println("Your card is not in the Magic hand.");
+            }
+        
         //Then report the result here
-    
+    System.out.println("magic hand is:");
+              for (int qu = 0; qu < magicHand.length;qu++){
+           System.out.println(store[qu] ); 
+        }
 
 
 }
