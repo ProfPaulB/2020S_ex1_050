@@ -3,13 +3,16 @@ package pickacard;
 /** 
  * @author Dhruv Shukla 20th May
  */
-import java.util.Scanner;
+//import java.util.Scanner;
 public class CardTrick {
 
     public static void main(String[] args) 
     {
         
         Card[] magicHand = new Card[7];
+        Card LuckyCard = new Card();
+        LuckyCard.setValue(5);
+        LuckyCard.setSuit("Spades");
         int value;
         String suits;
         String result="";
@@ -27,21 +30,21 @@ public class CardTrick {
         }
         
         
-        Scanner input = new Scanner(System.in);
+        //Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter card value and Suit:");//insert code to ask the user for Card value and suit, create their card
+       /* System.out.println("Enter card value and Suit:");//insert code to ask the user for Card value and suit, create their card
         value = input.nextInt();
-        suits = input.nextLine();
+        suits = input.nextLine();*/
         
-        for (int i = 0; i < magicHand.length; i++)               // and search magicHand here
+        for (int i = 0; i < magicHand.length; i++)               // Searching for a match with magicHand  
         {
-             if(magicHand[i].getValue()==value && magicHand[i].getSuit().equals(suits))
+             if(magicHand[i].getValue()==LuckyCard.getValue() && magicHand[i].getSuit().equals(LuckyCard.getSuit()))
              {
-                 result="You got the magic hand";
+                 result="You got the magic hand, you win";
              }
              else
              {
-                 result="You diidn't get the magic hand";
+                 result="You diidn't get the magic hand, you lose";
              }
             
         }
