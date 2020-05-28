@@ -28,8 +28,8 @@ public class CardTrick {
         String suitn;
         
         Card luckyCard = new Card();
-        luckyCard.setValue(2);
-        luckyCard.setSuit("Diamonds");
+        luckyCard.setValue(10);
+        luckyCard.setSuit("Hearts");
          luckn= luckyCard.getValue();
          suitn = luckyCard.getSuit();
         String luckynumber = luckn + suitn;
