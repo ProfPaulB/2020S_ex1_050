@@ -7,13 +7,21 @@ package pickacard;
  * There are 52 cards in a deck, no jokers.
  * This code is to be used in Exercise 1. When you create your own branch,
  * add your name as an author.
- * @author dancye
- * @author Paul Bonenfant
+ * 
+ * @author Sehajdeep Kaur
  */
 public class Card {
 
+    static void nextInt() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    static void nextInt(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
    private String suit; //clubs, spades, diamonds, hearts
-   private int value;//1-13
+   int value;//1-13
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
     /**
