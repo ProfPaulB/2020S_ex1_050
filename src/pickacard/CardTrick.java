@@ -1,20 +1,16 @@
 package pickacard;
 
-import java.util.Scanner;
-
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects and then
- * asks the user to pick a card and searches the array of cards for the match to
- * the user's card.
+ * and searches the array of cards for the match to lucky card.
  *
  * @author Daljeet Singh 28 May 2020
- * @version 1.0
+ * @version 2.0
  */
 public class CardTrick {
 
     public static void main(String[] args) {
-
-        Scanner n = new Scanner(System.in);
+      
         Card[] magicHand = new Card[7];
         int[] tempValue = new int[7];                  // temporary variable for holding the values(int) of different cards.
         String[] tempSuit = new String[7];             // temporary variable for holding the suit(String) of different cards.
@@ -26,16 +22,15 @@ public class CardTrick {
             tempValue[i] = c.getValue();               //Assigning the random values to temporary variable.
             tempSuit[i] = c.getSuit();                 //Assigning the random suits to temporary variable.
         }
-
-        // Asking user for input of card(suit and value).
-        System.out.println("Enter the suit of card (Hearts, Diamonds, Spades, Clubs)");
-        String suit = n.nextLine();
-        System.out.println("Enter the value of card ( Ace = 1, 2-10, Jack =11, Queen =12, King = 13)");
-        int value = n.nextInt();
+        
+        //luckyCard to replace the user input.
+        Card luckyCard = new Card();
+        luckyCard.setValue(4);
+        luckyCard.setSuit("Hearts");
 
         //Searching the magic hand of 7 cards for user's card.
         for (int i = 0; i < magicHand.length; i++) {
-            if ((value == tempValue[i]) && (suit.equalsIgnoreCase(tempSuit[i]))) {
+            if ( (luckyCard.getValue()) == tempValue[i]) && ( (luckyCard.getSuit()).equalsIgnoreCase(tempSuit[i])) ) {
                 check = 1;
             }
         }
