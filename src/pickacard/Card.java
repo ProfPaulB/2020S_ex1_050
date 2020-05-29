@@ -1,5 +1,7 @@
 package pickacard;
 
+import java.util.Random;
+
 /**
  * A class that models playing card Objects. Cards have 
  * a value (note that Ace = 1, Jack -11, Queen =12, King = 13)
@@ -7,8 +9,9 @@ package pickacard;
  * There are 52 cards in a deck, no jokers.
  * This code is to be used in Exercise 1. When you create your own branch,
  * add your name as an author.
-
- * @author Hy Ngo
+ * @author dancye
+ * @author Paul Bonenfant
+ * @author Vadim Andreev
  */
 public class Card {
 
@@ -43,6 +46,17 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
+    
+    //Creating method that creates random value
+    public int randVal(){
+       Random r = new Random();
+       return r.nextInt(13)+1;
+    }
    
+    //Creating method that creates random Suit
+    public String randSuit(){
+        Random r = new Random();
+        return SUITS[r.nextInt(3)];
+    }
 
 }
