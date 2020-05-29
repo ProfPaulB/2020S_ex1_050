@@ -13,14 +13,16 @@ public class CardTrick {
     public static void main(String[] args) {
         
         Card[] magicHand = new Card[7];
+        
         Card LuckyCard= new Card();
+        
         LuckyCard.setValue(11);
         LuckyCard.setSuit(3);
 
         for (int i = 0; i < magicHand.length; i++) {
            
             magicHand[i]=new Card();           
-            magicHand[i].setValue((int) ((1 + Math.random()*13)));
+            magicHand[i].setValue((int) ((Math.random()*13) + 1));
             magicHand[i].setSuit((int) (Math.round(Math.random()*3)));      
             
         }
