@@ -21,11 +21,11 @@ public class CardTrick {
         Scanner input = new Scanner(System.in);
       
         for (int i = 0; i < magicHand.length; i++) {
-    
-            c.setValue((int)(1 + Math.random()*13));
-            c.setSuit(Card.SUITS[(int)(Math.random()*4)]);
+            Card b = new Card();
+            b.setValue((int)(1 + Math.random()*13));
+            b.setSuit(Card.SUITS[(int)(Math.random()*4)]);
             
-            magicHand[i] = c;
+            magicHand[i] = b;
         }
         
        
@@ -61,7 +61,7 @@ public class CardTrick {
         
         for(int i = 0; i < magicHand.length; i++)
         {
-            if(magicHand[i].getValue() == magicCard.getValue() && magicHand[i].getSuit().equalsIgnoreCase(magicCard.getSuit()))
+            if(magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equalsIgnoreCase(luckyCard.getSuit()))
             {
                 output = "Winner";
             }
