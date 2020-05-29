@@ -11,6 +11,7 @@ import java.util.Random;
  * add your name as an author.
  * @author dancye
  * @author Paul Bonenfant
+ * 
  * @author Vadim Andreev
  */
 public class Card {
