@@ -33,6 +33,12 @@ public class CardTrick {
             System.out.println(c.getValue() + " " + c.getSuit());
              */
         }
+        
+        // create a luckyCard object and set its value and suit
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit(Card.SUITS[3]);
+        
             // ask a user to pick a card 
         System.out.println("*** Please pick any card ***\n");
 
