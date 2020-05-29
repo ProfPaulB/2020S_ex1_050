@@ -39,25 +39,16 @@ public class CardTrick {
         luckyCard.setValue(7);
         luckyCard.setSuit(Card.SUITS[3]);
         
-            // ask a user to pick a card 
-        System.out.println("*** Please pick any card ***\n");
-
-        System.out.println("What is your card value (1-13):");
-        int userCardValue = Integer.parseInt(input.nextLine());
-
-        System.out.println("What is your card suit (Clubs, Spades, Diamonds or Hearts):");
-        String userCardSuit = input.next();
-
-        boolean isMagic = false; // boolean check control
+       boolean isMagic = false; // boolean check control
         for (Card card : magicHand) {  // loop to find the matching card
-            if (userCardSuit.equalsIgnoreCase(card.getSuit()) && userCardValue == card.getValue()) {
+            if (luckyCard.getSuit().equals(card.getSuit()) && luckyCard.getValue() == card.getValue()) {
                 isMagic = true;
                 break;
             }
             isMagic = false; // false if can't find the card
         }
-
-        String checkCard = isMagic ? "Your card is in the magic hand" : "Not in the the magic hand, try again!";
+        
+        String checkCard = isMagic ? "You are a *** WINNER! ***" : "Not a winnig card, try again!";
         System.out.println(checkCard);
 
     }
