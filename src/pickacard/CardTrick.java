@@ -34,8 +34,8 @@ public class CardTrick {
      
        
    
-       /* System.out.println("Magic hand card game");
-        System.out.println("What will be the number of the card? Choose from 1-13");
+        System.out.println("Magic hand card game");
+        /*System.out.println("What will be the number of the card? Choose from 1-13");
         int usernumber= input.nextInt();
         System.out.println("What will be the suit of the card- Diamonds,Spades,Clubs or Hearts?");
         String usersuit= input.next();
@@ -48,11 +48,12 @@ public class CardTrick {
         
         String luckynumber;
         Card luckyCard= new Card(); 
-        luckyCard.setvalue(12);
+        luckyCard.setValue(12);
         luckyCard.getValue();
         luckyCard.setSuit("Spades");
         luckyCard.getSuit();
         String usercard = luckyCard.getValue() + luckyCard.getSuit();
+        System.out.println("Your luckyCard is 12 Spades");
         // this above is to make a hard coded luckyCard object with constant number and suit.
         
         int i;
