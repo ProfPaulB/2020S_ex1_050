@@ -1,6 +1,5 @@
 package pickacard;
 
-import java.util.Scanner;
 
 
 /**
@@ -23,16 +22,13 @@ public class CardTrick {
             magicHand[i]=c;
         }
         
-        Scanner s = new Scanner(System.in);
-        
-        System.out.print("Enter value for card:(spades,diamond,clubs,hearts):");
-        int value = s.nextInt();
-        System.out.print("Enter suit for card: ");
-        String suit =s.next();
-        int count=0;
+       Card luckyCard = new Card();
+       luckyCard.setValue(5);
+       luckyCard.setSuit("Diamond");
+       int count=0;
        for(int i=0; i<magicHand.length; i++)
        {
-           if(value==magicHand[i].getValue() && suit.equalsIgnoreCase(magicHand[i].getSuit()))
+           if(luckyCard.getValue()==magicHand[i].getValue() && luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit()))
            {
                count=1;
            }    
