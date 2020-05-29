@@ -16,13 +16,13 @@ public class CardTrick {
         
         Card[] magicHand = new Card[7];
        // Card user = new Card();
-        Card luckyCard = new card();
+        Card luckyCard = new Card();
 
         // filling the array of type Card randomly.
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             c.setValue((int)(1 + Math.random()*13));
-            c.setSuit(Card.SUITS[(int)(Math.random()*3)]);
+            c.setSuit(Card.SUITS[(int)(Math.random()*4)]);
             
             magicHand[i] = c;
         }
