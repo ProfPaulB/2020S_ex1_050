@@ -31,18 +31,23 @@ public class CardTrick {
             
         }
         
+      /*
         Card u = new Card();
         Scanner in = new Scanner(System.in);
         System.out.println("Choose your suit: Spades Hearts Clubs Diamonds");
         String suit= in.next();
         System.out.println("Choose a card number(1-13)");
         int number= in.nextInt();
-        String result= "";
+        String result= ""; */
         
-      
-       
+        //Hard codig object
+        Card luckyCard = new Card();
+        luckyCard.setValue(6);
+        luckyCard.setSuit("Spades"); 
+        
+        //Searching
         for (int i = 0; i < magicHand.length; i++) {
-           if (magicHand[i].getValue() == number && magicHand[i].getSuit().equalsIgnoreCase(suit))
+           if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equalsIgnoreCase(luckyCard.getSuit())
            {
                result = "Winner";
            }
