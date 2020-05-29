@@ -32,14 +32,14 @@ public class CardTrick {
         String suit1 = luckyCard.getSuit();
         
         
-        Card[] magicHand = new Card[7];
+        Card[] magicHand = new Card[7];                 //     Creating array of object of Class Card
         
         int[] value2 = new int[7];
         
         String[] suit2 = new String[7];
         
         
-        for (int i = 0; i < magicHand.length; i++)
+        for (int i = 0; i < magicHand.length; i++)       // This loop is to pick random numbers and to assign them
         {
             
             Card card = new Card();
@@ -55,16 +55,16 @@ public class CardTrick {
         
         for (int i = 0; i < magicHand.length; i++)
         {
-            System.out.println(value2[i]+" "+suit2[i]);
-        }
+            System.out.println(value2[i]+" "+suit2[i]);         // This is println statement to print the values
+        }                                                       //  and suits
         
         
-        for (int i = 0; i<magicHand.length; i++)
-        {
-            
-            if (value1 == value2[i] && suit1.equalsIgnoreCase(suit2[i]))
+        for (int i = 0; i<magicHand.length; i++)                      
+        {                                                                    // This loop helps find whether you goy magic hand or not
+                                                                           
+            if (value1 == value2[i] && suit1.equalsIgnoreCase(suit2[i])) 
             {
-                System.out.println("You got a magic hand");
+                System.out.println("You got a magic hand");             
             }
             
             else
