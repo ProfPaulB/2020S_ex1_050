@@ -29,7 +29,10 @@ public class CardTrick {
             //Loading The Array
             magicHand[i]= c;
             
-
+            /* 
+            Printing Generated Cards for Debugging
+            System.out.println("Value = " + c.getValue() + " Suit = " + c.getSuit());
+            */
             
         }
         
