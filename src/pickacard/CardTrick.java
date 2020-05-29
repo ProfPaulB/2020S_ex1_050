@@ -9,89 +9,71 @@ import static pickacard.Card.SUITS;
  * A class that fills a magic hand of 7 cards with random Card Objects and then asks the user to pick a card and
  * searches the array of cards for the match to the user's card. To be used as starting code in ICE 1
  *
- * 
- * @author Hy Ngo
+ * @author dancye
+ * @author Paul Bonenfant
+ * @author Abhinav Garg
+ * Date - 28 May 2020
  */
 public class CardTrick {
+    
+    /**
+     * This is the main method and program starts here
+     */
 
     public static void main(String[] args) {
-           Scanner input = new Scanner(System.in);
+        
+        
+        Card luckyCard=new Card();
+        
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Hearts");
+        
+        int value1  = luckyCard.getValue();
+        String suit1 = luckyCard.getSuit();
+        
+        
         Card[] magicHand = new Card[7];
-        String[] store = new String[7];
-        Random rdnumber = new Random();
         
-        int number;
-        int Low = 1;
-        int High = 13;
-       
-        int luckn=0;
-        String suitn;
+        int[] value2 = new int[7];
         
-        Card luckyCard = new Card();
-        luckyCard.setValue(2);
-        luckyCard.setSuit("Diamonds");
-         luckn= luckyCard.getValue();
-         suitn = luckyCard.getSuit();
-        String luckynumber = luckn + suitn;
-        //this one is automatic find Lucky card 
-          for (int i = 0; i < magicHand.length; i++) {
-            Card c = new Card();
-                   
-             number = rdnumber.nextInt(13);
-           c.setValue(number);
-           c.getValue();
-           int d = rdnumber.nextInt(4);
-          c.setSuit(Card.SUITS[d]);
-          c.getSuit();
-          store[i] = c.getValue()+ c.getSuit();
-       if(  luckynumber.equals(store[i])){
-           System.out.println("correct");}
-       else
-          System.out.println("not correct");
-          }
-      
-          
-//  This is code for magic hand pick random card and searching
-       
-    /*  for (int i = 0; i < magicHand.length; i++) {
-            Card c = new Card();
-                
-          
-             number = rdnumber.nextInt(13);
-           c.setValue(number);
-           c.getValue();
-           int d = rdnumber.nextInt(4);
-          c.setSuit(Card.SUITS[d]);
-          c.getSuit();
-          store[i] = c.getValue()+ c.getSuit();
-    
-
-      }
-       System.out.println("enter Card Number: ");
-        String cardnumber  = input.nextLine();
-        System.out.println("enter SUITS of Card: ");
-         String SUITS  = input.nextLine();
-        String results = cardnumber+SUITS;
+        String[] suit2 = new String[7];
         
-        for (int u = 0; u < magicHand.length;u++){
-            String o =  store[u];
-                if(o.equals(results)){
-                             System.out.println("correctS" ); 
-
-                }
+        
+        for (int i = 0; i < magicHand.length; i++)
+        {
+            
+            Card card = new Card();
+            
+            card.setValue((int)(1 + Math.random()*13));
+            card.setSuit((Card.SUITS)[(int)Math.random()*4]);
+            
+            value2[i] = card.getValue();
+            suit2[i] = card.getSuit();
+            
         }
-          System.out.println("magic hand is:");
-              for (int qu = 0; qu < magicHand.length;qu++){
-           System.out.println(store[qu] ); 
-        }*/
-        
-        //insert code to ask the user for Card value and suit, create their card
-        
-        // and search magicHand here
-        
-        //Then report the result here
     
-
-
-}
+        
+        for (int i = 0; i < magicHand.length; i++)
+        {
+            System.out.println(value2[i]+" "+suit2[i]);
+        }
+        
+        
+        for (int i = 0; i<magicHand.length; i++)
+        {
+            
+            if (value1 == value2[i] && suit1.equalsIgnoreCase(suit2[i]))
+            {
+                System.out.println("You got a magic hand");
+            }
+            
+            else
+            {
+                System.out.println("Sorry, you didn't get a magic hand");
+            }
+           
+        }
+       
+    }
+                     
 }
