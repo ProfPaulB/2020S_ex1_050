@@ -32,24 +32,24 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
-        System.out.println("Pick a card number 1-14 (J = 11, Q = 12, K = 13, A = 14");
-        int cardValue=sc.nextInt();
-        
-        System.out.println("Pick a Suit of Cards (Hearts, Diamonds, Clubs or Spades");
-        String suitValue = sc.next();
+        System.out.println("\n" + "Searching for Lucky Card Instant Winner");
+
+        Card luckyCard = new Card();
+        int luckyCardValue = 1;
+        String luckySuitValue = "Spades";
         
         boolean found = false;
         for (int z = 0; z < magicHand.length; z++){
-            if (cardValue == magicHand[z].getValue()) {
-                if (suitValue.equalsIgnoreCase(magicHand[z].getSuit())){
+            if (luckyCardValue == magicHand[z].getValue()) {
+                if (luckySuitValue.equalsIgnoreCase(magicHand[z].getSuit())){
                     found = true;
                 }
             }
         }
         if (found == true) {
-            System.out.println("Card found");
+            System.out.println("\n" + "Winner!");
         } else {
-            System.out.println("Sorry, Please try again");
+            System.out.println("\n" + "Not so lucky today");
         }
     }
 
