@@ -1,97 +1,56 @@
 package pickacard;
 
-import java.util.Random;
 import java.util.Scanner;
-import java.util.Vector;
-import static javax.management.Query.value;
-import static pickacard.Card.SUITS;
+
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects and then asks the user to pick a card and
  * searches the array of cards for the match to the user's card. To be used as starting code in ICE 1
  *
- * 
- * @author Hy Ngo
+ * @author Fiaz Syed
+ * Date: May 28, 2020
  */
 public class CardTrick {
 
     public static void main(String[] args) {
-           Scanner input = new Scanner(System.in);
+
         Card[] magicHand = new Card[7];
-        String[] store = new String[7];
-        Random rdnumber = new Random();
-        
-        int number;
-        int Low = 1;
-        int High = 13;
-       
-        int luckn=0;
-        String suitn;
-        
-        Card luckyCard = new Card();
-        luckyCard.setValue(2);
-        luckyCard.setSuit("Diamonds");
-         luckn= luckyCard.getValue();
-         suitn = luckyCard.getSuit();
-        String luckynumber = luckn + suitn;
-        //this one is automatic find Lucky card 
-          for (int i = 0; i < magicHand.length; i++) {
-            Card c = new Card();
-                   
-             number = rdnumber.nextInt(13);
-           c.setValue(number);
-           c.getValue();
-           int d = rdnumber.nextInt(4);
-          c.setSuit(Card.SUITS[d]);
-          c.getSuit();
-          store[i] = c.getValue()+ c.getSuit();
-       if(  luckynumber.equals(store[i])){
-           System.out.println("correct");}
-       else
-          System.out.println("not correct");
-          }
-      
-          
-//  This is code for magic hand pick random card and searching
-       
-    /*  for (int i = 0; i < magicHand.length; i++) {
-            Card c = new Card();
-                
-          
-             number = rdnumber.nextInt(13);
-           c.setValue(number);
-           c.getValue();
-           int d = rdnumber.nextInt(4);
-          c.setSuit(Card.SUITS[d]);
-          c.getSuit();
-          store[i] = c.getValue()+ c.getSuit();
-    
+        Scanner sc = new Scanner(System.in);
 
-      }
-       System.out.println("enter Card Number: ");
-        String cardnumber  = input.nextLine();
-        System.out.println("enter SUITS of Card: ");
-         String SUITS  = input.nextLine();
-        String results = cardnumber+SUITS;
-        
-        for (int u = 0; u < magicHand.length;u++){
-            String o =  store[u];
-                if(o.equals(results)){
-                             System.out.println("correctS" ); 
-
-                }
+        for (int i = 0; i < magicHand.length; i++) {
+            Card c = new Card();
+            //c.setValue(insert call to random number generator here)
+            c.setValue(c.randomValue());
+            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setSuit(c.randomSuit());
+            
+            magicHand[i] = c;
+            
+            System.out.println(magicHand[i].getValue());
+            System.out.println(magicHand[i].getSuit());
         }
-          System.out.println("magic hand is:");
-              for (int qu = 0; qu < magicHand.length;qu++){
-           System.out.println(store[qu] ); 
-        }*/
-        
+
         //insert code to ask the user for Card value and suit, create their card
-        
         // and search magicHand here
-        
         //Then report the result here
-    
+        System.out.println("Pick a card number 1-14 (J = 11, Q = 12, K = 13, A = 14");
+        int cardValue=sc.nextInt();
+        
+        System.out.println("Pick a Suit of Cards (Hearts, Diamonds, Clubs or Spades");
+        String suitValue = sc.next();
+        
+        boolean found = false;
+        for (int z = 0; z < magicHand.length; z++){
+            if (cardValue == magicHand[z].getValue()) {
+                if (suitValue.equalsIgnoreCase(magicHand[z].getSuit())){
+                    found = true;
+                }
+            }
+        }
+        if (found == true) {
+            System.out.println("Card found");
+        } else {
+            System.out.println("Sorry, Please try again");
+        }
+    }
 
-
-}
 }

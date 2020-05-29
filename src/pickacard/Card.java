@@ -1,4 +1,5 @@
 package pickacard;
+import java.util.Random;
 
 /**
  * A class that models playing card Objects. Cards have 
@@ -8,7 +9,8 @@ package pickacard;
  * This code is to be used in Exercise 1. When you create your own branch,
  * add your name as an author.
 
- * @author Hy Ngo
+ * @author Fiaz Syed
+ * Date: May 28, 2020
  */
 public class Card {
 
@@ -43,6 +45,17 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-   
+    //insert two methods to generate random value and suit
+   public int randomValue(){
+       Random r = new Random();
+       int x = r.nextInt(13)+1;
+       return x;
+   }
+    //second method for suit
+    public String randomSuit(){
+        Random s = new Random();
+        int y = s.nextInt(3);
+        return SUITS[y];
+    }
 
 }
