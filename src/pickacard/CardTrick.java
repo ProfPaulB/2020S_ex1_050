@@ -17,18 +17,18 @@ public class CardTrick {
         
         Card LuckyCard= new Card();
         
-        LuckyCard.setValue(4);
+        LuckyCard.setValue(5);
         
-        LuckyCard.setSuit(2);
+        LuckyCard.setSuit(1);
         
 
         for (int i = 0; i < magicHand.length; i++) {
      
             magicHand[i]=new Card();     
             
-            magicHand[i].setValue((int) ((Math.random()*13)+1)); // insert call to random number generator here)
+            magicHand[i].setValue((int) ((Math.random()*13)+1)); 
             
-            magicHand[i].setSuit((int) (Math.round(Math.random()*3))); // 0-3 
+            magicHand[i].setSuit((int) (Math.round(Math.random()*3))); 
            
         } 
        
