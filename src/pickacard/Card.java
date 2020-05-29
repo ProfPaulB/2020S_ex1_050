@@ -12,7 +12,7 @@ import java.util.Random;
  * @author dancye
  * @author Paul Bonenfant
  * 
- * @author Vadim Andreev
+ * @author Vadim Andreev May 2020
  */
 public class Card {
 
