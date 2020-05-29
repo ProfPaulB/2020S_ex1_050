@@ -37,8 +37,8 @@ public class CardTrick {
         System.out.println("Choose your suit: Spades Hearts Clubs Diamonds");
         String suit= in.next();
         System.out.println("Choose a card number(1-13)");
-        int number= in.nextInt();
-        String result= ""; */
+        int number= in.nextInt();*/
+        String result= ""; 
         
         //Hard codig object
         Card luckyCard = new Card();
@@ -47,7 +47,7 @@ public class CardTrick {
         
         //Searching
         for (int i = 0; i < magicHand.length; i++) {
-           if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equalsIgnoreCase(luckyCard.getSuit())
+           if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equalsIgnoreCase(luckyCard.getSuit()))
            {
                result = "Winner";
            }
