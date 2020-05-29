@@ -16,10 +16,34 @@ public class CardTrick {
         
         Scanner input = new Scanner(System.in);
            
+        
         Card[] magicHand = new Card[7];
         int number = 0;
         String [] store = new String [7];
         Random rdnumber = new Random();
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit("Diamonds");
+         luckn= luckyCard.getValue();
+         suitn = luckyCard.getSuit();
+        String luckynumber = luckn + suitn;
+         for (int i = 0; i < magicHand.length; i++) {
+            Card c = new Card();
+                   
+             number = rdnumber.nextInt(13);
+           c.setValue(number);
+           c.getValue();
+           int d = rdnumber.nextInt(4);
+          c.setSuit(Card.SUITS[d]);
+          c.getSuit();
+          store[i] = c.getValue()+ c.getSuit();
+       if(  luckynumber.equals(store[i])){
+           System.out.println("You got a Lucky card");}
+       else
+          System.out.println("not correct");
+          }
+        
         //set value suits and get value suits  then store in array 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
@@ -47,6 +71,7 @@ public class CardTrick {
         break;
         }
        
+          
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         //insert code to ask the user for Card value and suit, create their card
