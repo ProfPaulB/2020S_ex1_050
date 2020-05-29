@@ -69,7 +69,7 @@ public class CardTrick {
             
             else
             {
-                System.out.println("Sorry, you didn't get a magic hand");
+                System.out.println("You haven't get a magic hand");
             }
            
         }
