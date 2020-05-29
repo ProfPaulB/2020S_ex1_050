@@ -15,7 +15,8 @@ public class CardTrick {
     public static void main(String[] args) {
         
         Card[] magicHand = new Card[7];
-        Card user = new Card();
+       // Card user = new Card();
+        Card luckyCard = new card();
 
         // filling the array of type Card randomly.
         for (int i = 0; i < magicHand.length; i++) {
@@ -26,17 +27,17 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        Scanner input = new Scanner(System.in);
+        //Scanner input = new Scanner(System.in);
         
         /*
         Asking user to enter a value.
         then, storing it into the user object.
         */
         
-        System.out.print("Enter the card value: ");
-        int value = input.nextInt();
-        user.setValue(value);
-        System.out.println();
+       // System.out.print("Enter the card value: ");
+        //int value = input.nextInt();
+       // user.setValue(value);
+       // System.out.println();
         
         
         
@@ -45,20 +46,31 @@ public class CardTrick {
         then, storing the corresponding suit value into the user ojbect using a switch.
         */
         
-        System.out.println("Choose Suit \n1.Hearts 2.Diamonds 3.Spades 4.Clubs");
-        int suitNum = input.nextInt();
+        //System.out.println("Choose Suit \n1.Hearts 2.Diamonds 3.Spades 4.Clubs");
+        //int suitNum = input.nextInt();
         
-        switch(suitNum)
-        {
-            case 1: user.setSuit(Card.SUITS[0]);  
-                      break;
-            case 2: user.setSuit(Card.SUITS[1]);
-                      break;
-            case 3: user.setSuit(Card.SUITS[2]);
-                      break;
-            case 4: user.setSuit(Card.SUITS[3]);
-                      break;
-        }
+        //switch(suitNum)
+      //  {
+      //      case 1: user.setSuit(Card.SUITS[0]);  
+      //              break;
+      //  case 2: user.setSuit(Card.SUITS[1]);
+      //              break;
+      //   case 3: user.setSuit(Card.SUITS[2])
+      //           break;
+      // case 4: user.setSuit(Card.SUITS[3]);
+      //                break;
+       // }
+        
+        
+        
+        
+        
+        /*
+        setting hardcoded values to luckyCard object.
+        */
+        
+        luckyCard.setValue(7);
+        luckyCard.setSuit(Card.SUITS[0]);
         
         /*
         getting the result.
@@ -70,7 +82,7 @@ public class CardTrick {
         
         for(int i = 0; i < magicHand.length; i++)
         {
-            if(magicHand[i].getValue() == user.getValue() && magicHand[i].getSuit().equalsIgnoreCase(user.getSuit()))
+            if(magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equalsIgnoreCase(luckyCard.getSuit()))
             {
                 result = "++++WIN++++";
             }
