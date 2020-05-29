@@ -20,7 +20,7 @@ public class CardTrick {
         
         Card LuckyCard= new Card();
         
-        LuckyCard.setValue(13);
+        LuckyCard.setValue(12);
         
         LuckyCard.setSuit(2);
         
