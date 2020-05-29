@@ -23,14 +23,18 @@ public class CardTrick {
                
            }
            
-           System.out.println("Enter any card number: ");
+          /* System.out.println("Enter any card number: ");
            int value = input.nextInt();
            System.out.println("Enter suit for card: ");
-           String suit = input.next();
+           String suit = input.next();*/
+           
+           Card luckyCard = new Card();
+		   luckyCard.setValue(10);
+		   luckyCard.setSuit("Hearts");
            int number = 0;
            for (int i=0; i<magicHand.length; i++)
            {
-               if(value==magicHand[i].getValue() && suit.equalsIgnoreCase(magicHand[i].getSuit()))
+               if(luckyCard.getValue()==magicHand[i].getValue() && luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit()))
                {
                    number=1;
                }
