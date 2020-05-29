@@ -20,7 +20,7 @@ public class CardTrick {
         // filling the array of type Card randomly.
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-            c.setValue((int)(Math.random()*13));
+            c.setValue((int)(1 + Math.random()*13));
             c.setSuit(Card.SUITS[(int)(Math.random()*3)]);
             
             magicHand[i] = c;
