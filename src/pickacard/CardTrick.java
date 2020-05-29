@@ -34,7 +34,7 @@ public class CardTrick {
      
        
    
-        System.out.println("Magic hand card game");
+       /* System.out.println("Magic hand card game");
         System.out.println("What will be the number of the card? Choose from 1-13");
         int usernumber= input.nextInt();
         System.out.println("What will be the suit of the card- Diamonds,Spades,Clubs or Hearts?");
@@ -44,14 +44,23 @@ public class CardTrick {
         
         
        
-        //this above one is to allow user to select card by choosing the card number and the suit
+        //this above one is to allow user to select card by choosing the card number and the suit*/
+        
         String luckynumber;
+        Card luckyCard= new Card(); 
+        luckyCard.setvalue(12);
+        luckyCard.getValue();
+        luckyCard.setSuit("Spades");
+        luckyCard.getSuit();
+        String usercard = luckyCard.getValue() + luckyCard.getSuit();
+        // this above is to make a hard coded luckyCard object with constant number and suit.
+        
         int i;
         for ( i = 0; i < magicHand.length; i++){
             luckynumber =  store[i];
                 if(luckynumber.equals(usercard)){
                     System.out.println("");
-                    System.out.println("The card is in the magic hand");
+                    System.out.println("You won");
                     i++;
                      break;
                         }
@@ -66,8 +75,8 @@ public class CardTrick {
                }
                else
                    {System.out.println("");
-                    System.out.println("The card isnt in the magic hand");}
-                    //this above one searches and tells whether the user card was in the magic hand or not
+                    System.out.println("You lost");}
+                    //this above one searches and tells whether the user won or not
                 
                     System.out.println("");
                     System.out.println("Magic hand was:");
