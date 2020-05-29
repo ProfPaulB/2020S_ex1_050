@@ -14,8 +14,9 @@ public class CardTrick {
 
     public static void main(String[] args) {
          
-       Card[] magicHand = new Card[7];    
-        Card c = new Card();
+        Card[] magicHand = new Card[7];    
+        //Card c = new Card();
+	Card luckyCard = new Card();
    
         Scanner input = new Scanner(System.in);
       
@@ -28,38 +29,39 @@ public class CardTrick {
         }
         
        
-       System.out.println("Enter card: ");
-       int card = input.nextInt();
-       c.setValue(card);
+     //  System.out.println("Enter card: ");
+     //  int card = input.nextInt();
+     //  c.setValue(card);
         
         
         
 
         
-        System.out.println("select one .Hearts 2.Diamonds 3.Spades 4.Clubs");
-        int Number = input.nextInt();
+      //  System.out.println("select one .Hearts 2.Diamonds 3.Spades 4.Clubs");
+      //  int Number = input.nextInt();
+      //  
+      //  switch(Number)
+      //  {
+      //      case 1: c.setSuit(Card.SUITS[0]);  
+      //            break;
+      //      case 2: c.setSuit(Card.SUITS[1]);
+      //            break;
+      //      case 3: c.setSuit(Card.SUITS[2]);
+      //           break;
+      //      case 4: c.setSuit(Card.SUITS[3]);
+      //           break;
+      //  }
         
-        switch(Number)
-        {
-            case 1: c.setSuit(Card.SUITS[0]);  
-                  break;
-            case 2: c.setSuit(Card.SUITS[1]);
-                  break;
-            case 3: c.setSuit(Card.SUITS[2]);
-                 break;
-            case 4: c.setSuit(Card.SUITS[3]);
-                 break;
-        }
         
         
-        
-      
+      luckyCard.setValue(7);
+      luckyCard.setSuit(Card.SUITS[0]);
         
         String output = "Winner";
         
         for(int i = 0; i < magicHand.length; i++)
         {
-            if(magicHand[i].getValue() == c.getValue() && magicHand[i].getSuit().equalsIgnoreCase(c.getSuit()))
+            if(magicHand[i].getValue() == magicCard.getValue() && magicHand[i].getSuit().equalsIgnoreCase(magicCard.getSuit()))
             {
                 output = "Winner";
             }
