@@ -58,40 +58,7 @@ public class CardTrick {
         
         //Reporting the result
         System.out.println(result);
-
-        
-        /* Commenting this to make Hard-Coded Object
-        Scanner input = new Scanner(System.in);
-        
-        //Creating User's Card
-        Card userCard = new Card();
-        
-        //Taking User Input
-        System.out.println("Enter the card value");
-        int value = input.nextInt();
-        userCard.setValue(value);
-        System.out.println("Enter the Suit Number -> 1.Hearts, 2.Diamonds, 3.Spades, 4.Clubs");
-        int suitnum = input.nextInt();
-        String suit = Card.SUITS[suitnum-1];
-        userCard.setSuit(suit); 
-        
-        
-        
-        // Searching in Magic Card
-        for (int i = 0; i < magicHand.length; i++) {
-           if (magicHand[i].getValue() == userCard.getValue() && magicHand[i].getSuit() == userCard.getSuit())
-           {
-               result = "Congratulations, you won!";
-           }
-           else
-           {
-               result = "Sorry! Try Again!";
-           }
-            
-        }
-        */
-        
-                
+               
     }
 
 }
