@@ -20,9 +20,9 @@ public class CardTrick {
         
         Card LuckyCard= new Card();
         
-        LuckyCard.setValue(7);
+        LuckyCard.setValue(13);
         
-        LuckyCard.setSuit(1);
+        LuckyCard.setSuit(2);
         
 
         for (int i = 0; i < magicHand.length; i++) {
