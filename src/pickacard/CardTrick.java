@@ -36,6 +36,31 @@ public class CardTrick {
             
         }
         
+        String result= " ";
+        
+        //Creating Hard-coded object
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Hearts");
+        
+        //Searching hard-coded object in Magic Hand
+        for (int i = 0; i < magicHand.length; i++) {
+           if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit() == luckyCard.getSuit())
+           {
+               result = "Congratulations, you won!";
+           }
+           else
+           {
+               result = "Sorry! Try Again!";
+           }
+            
+        }
+        
+        //Reporting the result
+        System.out.println(result);
+
+        
+        /* Commenting this to make Hard-Coded Object
         Scanner input = new Scanner(System.in);
         
         //Creating User's Card
@@ -48,9 +73,9 @@ public class CardTrick {
         System.out.println("Enter the Suit Number -> 1.Hearts, 2.Diamonds, 3.Spades, 4.Clubs");
         int suitnum = input.nextInt();
         String suit = Card.SUITS[suitnum-1];
-        userCard.setSuit(suit);
+        userCard.setSuit(suit); 
         
-        String result= " ";
+        
         
         // Searching in Magic Card
         for (int i = 0; i < magicHand.length; i++) {
@@ -64,10 +89,9 @@ public class CardTrick {
            }
             
         }
+        */
         
-        //Reporting the result
-        System.out.println(result);
-        
+                
     }
 
 }
