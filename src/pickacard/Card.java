@@ -8,17 +8,19 @@ package pickacard;
  * This code is to be used in Exercise 1. When you create your own branch,
  * add your name as an author.
 
- * @author Hy Ngo
+ * @author Jeel Puranik 05/28/20
  */
 public class Card {
 
-   private String suit; //clubs, spades, diamonds, hearts
-   private int value;//1-13
+     private String suit; // Hearts, Diamonds, Spades, Clubs
+   private int value;// 1,2,3,4,5,6,7,8,9,10,11,12,13
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
-    /**
+    
+   /**
      * @return the suit
      */
+   
     public String getSuit() {
         return suit;
     }
@@ -26,13 +28,17 @@ public class Card {
     /**
      * @param suit the suit to set
      */
-    public void setSuit(String suit) {
-        this.suit = suit;
+    
+    public void setSuit(int suit) {
+       
+        this.suit = SUITS[suit];
+        
     }
 
     /**
      * @return the value
      */
+    
     public int getValue() {
         return value;
     }
@@ -40,9 +46,10 @@ public class Card {
     /**
      * @param value the value to set
      */
+    
     public void setValue(int value) {
         this.value = value;
     }
    
-
+   
 }
