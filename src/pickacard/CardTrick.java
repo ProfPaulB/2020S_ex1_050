@@ -17,7 +17,7 @@ public class CardTrick {
         
         Card LuckyCard= new Card();
         
-        LuckyCard.setValue(5);
+        LuckyCard.setValue(7);
         
         LuckyCard.setSuit(1);
         
@@ -28,7 +28,7 @@ public class CardTrick {
             
             magicHand[i].setValue((int) ((Math.random()*13)+1)); 
             
-            magicHand[i].setSuit((int) (Math.round(Math.random()*3))); 
+            magicHand[i].setSuit((int) (Math.round(Math.random()*3)));
            
         } 
        
