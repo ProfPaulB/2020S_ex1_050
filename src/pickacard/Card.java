@@ -8,9 +8,11 @@ package pickacard;
  * This code is to be used in Exercise 1. When you create your own branch,
  * add your name as an author.
  * @author dancye
- * @author Paul Bonenfant
+ * @author Yash Patel 28th May
  */
 public class Card {
+
+    static String[] SUIT;
 
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
