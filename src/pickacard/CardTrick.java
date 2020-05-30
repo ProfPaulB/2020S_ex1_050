@@ -12,11 +12,11 @@ public class CardTrick {
     public static void main(String[] args) {
         
         Card[] magicHand = new Card[7];
-        //Card LuckyCard = new Card();
-        //LuckyCard.setValue(1);
-       // LuckyCard.setSuit("Hearts");
-        int value;
-        String suit;
+        Card LuckyCard = new Card();
+        LuckyCard.setValue(1);
+        LuckyCard.setSuit("Hearts");
+       // int value;
+        //String suit;
         String output = "";
 
         for (int i = 0; i < magicHand.length; i++) {
@@ -33,19 +33,22 @@ public class CardTrick {
             */
         }
      //insert code to ask the user for Card value and suit, create their card   
-        Scanner input = new Scanner(System.in);
+     //Scanner input = new Scanner(System.in);
         
-        System.out.println("Enter your card and suit");
-        value = input.nextInt();
-        suit = input.nextLine();
+     //System.out.println("Enter your card and suit");
+       // value = input.nextInt();
+        //suit = input.nextLine();
         
         
         // and search magicHand here
         for (int i = 0; i < magicHand.length; i++) {
-        if(magicHand[i].getValue()==value && magicHand[i].getSuit().equals(suit))
-             {
+        //if(magicHand[i].getValue()==value && magicHand[i].getSuit().equals(suit))
+          if(magicHand[i].getValue()==LuckyCard.getValue() && magicHand[i].getSuit().equals(LuckyCard.getSuit()))
+          {
                 output = "Bettter Luck Next Time";
-            } else {
+            }
+          else 
+          {
                 output ="Congrats It Matched";
             }
         } //Then report the result here
