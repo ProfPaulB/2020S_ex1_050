@@ -45,11 +45,11 @@ public class CardTrick {
         //if(magicHand[i].getValue()==value && magicHand[i].getSuit().equals(suit))
           if(magicHand[i].getValue()==LuckyCard.getValue() && magicHand[i].getSuit().equals(LuckyCard.getSuit()))
           {
-                output = "Bettter Luck Next Time";
+                output = "Congrats It Matched";
             }
           else 
           {
-                output ="Congrats It Matched";
+                output ="Better Luck Next Time";
             }
         } //Then report the result here
        System.out.println(output);
