@@ -13,6 +13,9 @@ public class CardTrick {
     public static void main(String[] args) {
         
         Card[] magicHand = new Card[7];
+        Card LuckyCard = new Card();
+        LuckyCard.setValue(5);
+        LuckyCard.setSuit("Spades");
         int value;
         String suit;
         String output = "";
