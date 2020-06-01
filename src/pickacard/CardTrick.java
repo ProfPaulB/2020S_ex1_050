@@ -29,11 +29,14 @@ public class CardTrick {
 
         Scanner keyboard = new Scanner(System.in);
         //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Enter predicted card value:");
+       /* System.out.println("Enter predicted card value:");
         int inputValue = keyboard.nextInt();
         System.out.println("Enter predicted suit:");
         String inputSuit = keyboard.next();
-        boolean isFound = false;
+        boolean isFound = false;*/
+        //add luck card for search
+       int inputValue = 7;
+       int inputSuit = "Clubs";
         // and search magicHand here
         for(Card c: magicHand){
           
