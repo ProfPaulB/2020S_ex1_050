@@ -27,7 +27,7 @@ public class CardTrick {
             magicHand[i] = c;
         }
 
-        Scanner keyboard = new Scanner(System.in);
+       // Scanner keyboard = new Scanner(System.in);
         //insert code to ask the user for Card value and suit, create their card
        /* System.out.println("Enter predicted card value:");
         int inputValue = keyboard.nextInt();
