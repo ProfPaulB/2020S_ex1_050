@@ -32,8 +32,8 @@ public class CardTrick {
        /* System.out.println("Enter predicted card value:");
         int inputValue = keyboard.nextInt();
         System.out.println("Enter predicted suit:");
-        String inputSuit = keyboard.next();
-        boolean isFound = false;*/
+        String inputSuit = keyboard.next();*/
+        boolean isFound = false;
         //add luck card for search
        int inputValue = 7;
        String inputSuit = "Clubs";
