@@ -36,7 +36,7 @@ public class CardTrick {
         boolean isFound = false;*/
         //add luck card for search
        int inputValue = 7;
-       int inputSuit = "Clubs";
+       String inputSuit = "Clubs";
         // and search magicHand here
         for(Card c: magicHand){
           
