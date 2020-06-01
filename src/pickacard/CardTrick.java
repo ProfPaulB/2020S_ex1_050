@@ -36,11 +36,11 @@ public class CardTrick {
         // and search magicHand hereCard 
         System.out.print("Your Card:" + userChoice.getValue() + " ");
             System.out.println(userChoice.getSuit());
-            System.out.println("Magic Hand: ");
+          /**  System.out.println("Magic Hand: ");*/
         for (int i = 0; i < magicHand.length; i++) {
-            
+          /**  
             System.out.print(magicHand[i].getValue() + " ");
-            System.out.println(magicHand[i].getSuit());
+            System.out.println(magicHand[i].getSuit());*/
             if(magicHand[i].getValue() == userChoice.getValue() && magicHand[i].getSuit() == userChoice.getSuit()  ){
                 flag = true;
                 break;
