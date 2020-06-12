@@ -22,25 +22,20 @@ public class CardTrick {
             magicHand[i] = c;
         }
 
-        Scanner input = new Scanner(System.in);
-        Card c = new Card();
-        System.out.print("Enter a value for card(note that Ace = 1, Jack =11, Queen =12, King = 13) : ");
-        int value = input.nextInt();
-        c.setValue(value);
-        System.out.print("Enter a suit for card(Clubs, Spades, Diamonds, Hearts) : ");
-        String suit = input.next();
-        c.setSuit(suit);
+        Card luckyCard = new Card();
+        luckyCard.setValue(5);
+        luckyCard.setSuit("Diamonds");
         int num = 0;
         for (int i = 0; i < magicHand.length; i++) {
-            if (c.getValue() == magicHand[i].getValue() && c.getSuit().equalsIgnoreCase(magicHand[i].getSuit())) {
+            if(luckyCard.getValue()==magicHand[i].getValue() && luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())) {
                 num = 1;
             }
             //System.out.println(magicHand[i].getValue() + "  " + magicHand[i].getSuit());
         }
         if (num == 1) {
-            System.out.println("User’s card is in the magic hand of random cards.");
+            System.out.println("Congragulations... You are a winner.");
         } else {
-            System.out.println("User’s card is not in the magic hand of random cards.");
+            System.out.println("Sorry... You lose the game.");
         }
     }
 
